@@ -1,7 +1,8 @@
 <?php
 
 use App\Http\Controllers\HelloController;
-
+use App\Http\Controllers\ProductController;
+use App\Http\Controllers\VendorController;
 
 Route::get('/hello', [HelloController::class, 'index']);
 
@@ -22,6 +23,7 @@ Route::get('/', function () {
 });
  Route::get('/posts', [HelloController::class, 'index']);
  Route::get('/products/{id}', [ProductController::class, 'show']);
+ Route::get('/vendors/{id}', [VendorController::class, 'show']);
 
 
 
