@@ -24,9 +24,7 @@ use App\Http\Controllers\ResponseController;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hello', function () {
-    return 'Hello, world!';
-});
+
 
  Route::get('/hello', [HelloController::class, 'index']);
  Route::get('/posts', [HelloController::class, 'index']);
@@ -35,10 +33,10 @@ Route::get('/hello', function () {
  Route::get('/products/create', [ProductController::class, 'create']);
  
  Route::post('/products/store', [ProductController::class, 'store'])->name('products.store');
- Route::get('/vendors/{id}', [VendorController::class, 'show']);
  Route::get('/vendors/create', [VendorController::class, 'create']);
  
  Route::post('/vendors/store', [VendorController::class, 'store'])->name('vendors.store');
+ Route::get('/vendors/{id}', [VendorController::class, 'show']);
  Route::get('/requests/create', [RequestController::class, 'create']);
  Route::post('/requests/confirm', [RequestController::class, 'confirm'])->name('requests.confirm');
  Route::get('/responses', [ResponseController::class, 'index']);
