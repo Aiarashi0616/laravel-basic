@@ -18,6 +18,7 @@ class ProductSeeder extends Seeder
             'price' => 600,
             'created_at' => '2023-06-01 00:00:00',
             'updated_at' => '2023-06-01 00:00:00',
-            'vendor_code' => 1111])
+            'vendor_code' => 1111
+        ]);
     }
 }
